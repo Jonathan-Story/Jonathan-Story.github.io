@@ -1,1 +1,150 @@
-Jonathan Story's e Portfolio
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Story - Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("img.jpg") no-repeat center center fixed; /* Background image */
+        background-size: cover; /* Cover the entire page */
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      #root {
+        text-align: center;
+        width: 100%;
+        padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+      }
+      h1 {
+        color: #dd5522; /* Auburn Orange for your name */
+        margin: 20px 0;
+        font-size: 48px; /* Larger font size */
+        text-transform: uppercase; /* Uppercase letters for a bold effect */
+        letter-spacing: 5px; /* Spacing between letters for style */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        padding: 20px;
+        background: linear-gradient(
+          90deg,
+          #0056b3,
+          #dd5522
+        ); /* Gradient background */
+        color: white;
+        border-radius: 10px; /* Rounded corners */
+        display: inline-block; /* Adjust width to content */
+      }
+      .lab-link {
+        display: block;
+        padding: 20px; /* Reduced initial padding */
+        margin: 10px 0;
+        background: linear-gradient(
+          90deg,
+          #dd5522,
+          #0056b3
+        ); /* Auburn Orange to Auburn Blue */
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        width: 100%;
+        overflow: hidden; /* Hide the description initially */
+        border-radius: 5px;
+        position: relative;
+      }
+      .lab-link:nth-child(odd) {
+        background: linear-gradient(
+          90deg,
+          #0056b3,
+          #dd5522
+        ); /* Auburn Blue to Auburn Orange for variation */
+      }
+      .lab-link:hover {
+        padding: 40px 20px; /* Expand row on hover */
+        transform: scale(1.05); /* Slight zoom effect on hover */
+        cursor: pointer;
+      }
+      .lab-description {
+        opacity: 0;
+        height: 0;
+        transition: all 0.3s ease;
+      }
+      .lab-link:hover .lab-description {
+        opacity: 1;
+        height: auto;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    <!-- Babel for JSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function LabLink({ labName, href, description }) {
+        return (
+          <a className="lab-link" href={href}>
+            {labName}
+            <div className="lab-description">{description}</div>
+          </a>
+        );
+      }
+
+      function Portfolio() {
+        const labs = [
+          {
+            name: "Lab1",
+            href: "lab1.html",
+            description: "This Lab is an introduction to MatLab",
+          },
+          {
+            name: "Lab2",
+            href: "lab2.html",
+            description: "This lab serves as an introduction to the TIMS unit.",
+          },
+          {
+            name: "Lab3",
+            href: "lab3.html",
+            description:
+              "Learn about React.js and component-based architecture.",
+          },
+          {
+            name: "Lab4",
+            href: "lab4.html",
+            description: "Explore backend development with Node.js.",
+          },
+          {
+            name: "Lab5",
+            href: "lab5.html",
+            description: "Understand databases and how to work with MongoDB.",
+          },
+        ];
+
+        return (
+          <div>
+            <h1>Jonathan Story</h1>
+            <div>
+              {labs.map((lab, index) => (
+                <LabLink
+                  key={index}
+                  labName={lab.name}
+                  href={lab.href}
+                  description={lab.description}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Portfolio />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

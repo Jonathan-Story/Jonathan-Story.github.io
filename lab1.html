@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(
+          45deg,
+          #dd5522,
+          #0056b3
+        ); /* Auburn Orange to Auburn Blue gradient */
+        color: #333;
+      }
+      nav {
+        background: #fff; /* White background for navigation */
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3; /* Auburn Blue border */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure it stays on top */
+      }
+      nav a {
+        color: #0056b3; /* Auburn Blue */
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+      nav a:hover {
+        background: #dd5522; /* Auburn Orange background on hover */
+        color: #fff;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000; /* Ensure it stays on top */
+        top: 100%;
+        left: 0;
+      }
+      .dropdown-content a {
+        color: #0056b3; /* Auburn Blue */
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+      .dropdown-content a:hover {
+        background: #dd5522; /* Auburn Orange background on hover */
+        color: #fff;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .container {
+        width: 80%;
+        margin: 80px auto 20px; /* Adjust top margin for fixed nav */
+        background: #fff; /* White background for content */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; /* Rounded corners for content box */
+      }
+      h1,
+      h2 {
+        color: #0056b3; /* Auburn Blue */
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .section p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="lab1.html">Lab1</a>
+          <a href="lab2.html">Lab2</a>
+          <a href="lab3.html">Lab3</a>
+          <a href="lab4.html">Lab4</a>
+          <a href="lab5.html">Lab5</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - [Lab Name]</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Provide an overview of the lab, its purpose, and any relevant
+          background information. Explain the significance of the experiment and
+          what you aim to achieve.
+        </p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+          Detail the step-by-step process of the experiment. Include any
+          materials used, specific methods followed, and how the experiment was
+          conducted.
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Summarize the findings of the experiment, including any results or
+          data obtained. Discuss whether the experiment met its objectives, any
+          conclusions drawn, and potential implications or further research
+          needed.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
