@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #dd5522, #0056b3);
+        color: #333;
+      }
+
+      nav {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      nav a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000;
+        top: 100%;
+        left: 0;
+      }
+
+      .dropdown-content a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .container {
+        width: 80%;
+        margin: 80px auto 20px;
+        background: #edd5d5;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        margin: 0;
+      }
+
+      /* Responsive Image CSS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Adds spacing around the image */
+        border: 2px solid #0056b3; /* Adds border to match your theme */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+        border-radius: 10px; /* Optional: rounds the corners of the image */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="/Lab1/lab1.html">Lab1</a>
+          <a href="/Lab2/lab2.html">Lab2</a>
+          <a href="/Lab3/lab3.html">Lab3</a>
+          <a href="/Lab4/lab4.html">Lab4</a>
+          <a href="/Lab5/lab5.html">Lab5</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - Lab 4: Special Signals TIMS</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          The goal of this lab is to utilize more TIMS unit modules to produce
+          even more signals. This lab requires measurement of various wave
+          values and the measurement tools that are used to measure these are
+          new to this lab as well. The lab procedure provides steps to making
+          these new signals and utilizing the measurement tools to find the
+          values of these signals. Additionally, the lab shows us how these
+          signals interact with each other under certain conditions.
+        </p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+          <br /><b>Part A: Digital Pulse Sequence</b><br />
+          A.1.5<br />
+          In the first steps of the lab the procedure introduces the use of a
+          new module called the Audio Oscillator. This allows the user to
+          manipulate the frequency of the signal by turning the knob on the
+          module. In steps A1-5 the lab calls for pluggin in the module and then
+          adjusting the knob to see the output in picoscope. The screenshot
+          below shows the output of the signal in picoscope. Additionally, it
+          shows how to measure places on a signal. The lab procedure asks for
+          the values of one pulse width and the clock cycle at 1kHz.The results
+          below were measured<br />
+          Pulse Width: 518us <br />
+          Clock Cycle: 998.8us
+          <br />
+          A.2 <br />
+          Steps 1 - 5 of A.2 ivnlove utilizing the Audio Oscillator with the
+          tims machine to generate a digital signal to show on the picoscope
+          <img src="/Lab4/lab4A2.png" alt=" " />
+          The minimum time Interval of the signal is one of the measurements
+          required.<br />
+          Minimum Time Interval: .5ms<br />
+          A.3 - Baseband Channel Filters<br />
+          Steps 1 - 5 of A.3 involve using the baseband channel filters to give
+          a variety of different signals jsut by turnign a know to a certain
+          setting. The below table (Table 1) shows the different measurements
+          for each setting of the knob.<br />
+          <img src="/Lab4/table1.png" alt="" />
+
+          In steps A.3 6-8 of the procedure, the lab asks us to look at how the
+          signals don't show a perfect ona nd off when the clock signal is high
+          to low. As the frequency of the clock increased the correspoinding
+          signal was no longer able to keep up and rise in time for the clock
+          signals next pulse. This resulf was achieved when the frequency of the
+          clock got up to 3.87 kHz. The screenshot below shows the result of the
+          indistinguishable signal.
+          <img src="/Lab4/lab4A3.png" alt="" />
+
+          <br /><b>Part B: Step Input</b><br />
+          Steps 1 - 4 of the procedure involve utilizign the audio oscillator
+          and the TIMS unit to make another digital signal where the pulses of
+          the output aren't perfect and take time to turn on and off. Picoscope
+          is then used to measure the parts of the signal that are important.
+          Below is a table (Table 2)showing the results of these
+          measurements.<br />
+          <img src="/Lab4/table2.png" alt="" />
+
+          <br /><b>Part C: Impulse</b><br />
+          Steps 1 - 4 of part C involve utilizing the sequence generator module
+          in combination with the audio oscillator to create an impulse signal
+          to view on picoscope. The below table and graph show the relationship
+          between frequency and the Pulse Width. THe data was obtained by
+          turning the knob of the oscillator and measuring on picoscope.<br />
+
+          <img src="/Lab4/table3.png" alt="" />
+          <img src="/Lab4/graph1.png" alt="" />
+
+          Steps C 6 - 9 of the procedure involves increasing frequency of the
+          input signal slowly to see how the amplitude of the output signal
+          decreases. The amplitude of this output is shrinking because the
+          cycles are too fast for the <br />
+
+          <br /><b>Part D: Sinusoidal Signals</b><br />
+          D1.1 - Basic Sine Waves <br />
+          Steps D.1 1 - 7 of the procedure call for using the amplifier module
+          in tandem with the rest of the modules utilized prior in the lab to
+          make a signal that displays as one input signal and an amplified
+          output signal on the picoscope. Below are the results of each filter
+          at a variety of frequency and their peak to peak voltages.
+          <img src="/Lab4/table4.png" alt="" />
+          As the frequency increases for each filter mode, the clarity of the
+          output signal gets worse and worse.
+          <br />D.2 - Clipping <br />
+          For D.2 the procedure calls for increasing the amplification using the
+          amplifier module knob. As the output signal was increasingly
+          amplified, the signal is distorted intensely. When I brought the
+          signal slowly to 20 Vpp the output signal hit a limit and would not
+          increase anymore.
+
+          <br /><b>Part E: Digital Detector</b><br />
+          The final step of this lab was to setup another signal where the input
+          and output were displayed on the picoscope. The operations used made
+          the output signal the inverse of the input clock signal. The next part
+          of the procedure had the frequency increased to see how the inverse
+          output gets distorted. Below is a table showing how distortion
+          effected the binary of the signal.
+
+          <img src="/Lab4/table5.png" alt="" />
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          <br /><b>What did you enjoy about this lab?</b><br />
+          I enjoyed the hands on aspect of this lab. I found it interesting to
+          use so many modules and being able to wire up a bunch of different
+          signals that were all unique.
+
+          <br /><b>What didn't go well in this lab</b><br />
+          Something that did not go well was figuring out how to properly
+          measure the siganls using the picoscope software. After I figured out
+          the measurement tools I found the rest of the lab to be
+          straightforward.
+
+          <br /><b
+            >How would you improve the lab experiment for the future classes?</b
+          ><br />
+          Something that could be improved is the clarity of the pictures in the
+          lab write up. I think they could have indicators as to what part of
+          the picture the procedure is talking about.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
