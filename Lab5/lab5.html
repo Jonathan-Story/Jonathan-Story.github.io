@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #dd5522, #0056b3);
+        color: #333;
+      }
+
+      nav {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      nav a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000;
+        top: 100%;
+        left: 0;
+      }
+
+      .dropdown-content a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .container {
+        width: 80%;
+        margin: 80px auto 20px;
+        background: #edd5d5;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        margin: 0;
+      }
+
+      /* Responsive Image CSS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Adds spacing around the image */
+        border: 2px solid #0056b3; /* Adds border to match your theme */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+        border-radius: 10px; /* Optional: rounds the corners of the image */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="/Lab1/lab1.html">Lab1</a>
+          <a href="/Lab2/lab2.html">Lab2</a>
+          <a href="/Lab3/lab3.html">Lab3</a>
+          <a href="/Lab4/lab4.html">Lab4</a>
+          <a href="/Lab5/lab5.html">Lab5</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - Lab 5: Matlab Plotting and Functions</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          The goal of this lab is to utilize matlab to plot functions in various
+          ways. We use the matlab function subplot to make multiple plots in one
+          figure and the plot function with hold on to plot multiple signals on
+          a single plot. This lab serves as a way to introduce more complex
+          plotting methods for future use.
+        </p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+          <br />1: Write a MATLAB Function<br />
+          <img src="/Lab5/1code.png" alt="" />
+          1.1) <br />
+          the t = in the command line is setting the range of time that you are
+          inputing into the plot function.
+          <br />
+          the plot function is making the graph based on the time set above and
+          the function. In this case the function is u(t, to) where to is the
+          offset of the function.
+          <br />
+          1.2)<br />
+          When you change the step size of t from .001 to .1 the graph will
+          simply have more incremnts on the x axis. The graph will look the same
+          but the x axis will have more points.
+          <br />1.3)<br />
+          y=t>=to is telling matlab to only display the graph when t is greater
+          than your given shift of "to"
+
+          <br />2: Ramp Function<br />
+          <img src="/Lab5/rampcode.png" alt="" />
+          2.1)<br />
+          y = (t-to).*(t>=to) is telling the matlab code to start applying the
+          given ramp starting at the given time to.
+          <br />
+          2.2) below are two plots that show what the ramp will be with differnt
+          inputs for to. I used -3 and 4<br />
+          <img src="/Lab5/Q2to3.png" alt="" />
+          <img src="/Lab5/Q2to4.png" alt="" />
+          <br />
+          3: Plotting Skills<br />
+          <img src="/Lab5/Q3plot.png" alt="" />
+          <br />4: Build the Pulse Function <br />
+          <img src="/Lab5/pulse1.png" alt="" />
+          <img src="/Lab5/pulse4.png" alt="" />
+          <br />5: Generate a Script with Different Sections<br />
+          5.1) <br />
+          The difference between a subplot and using two different figures is
+          that a subplot is a single figure that fits all the plots into one
+          window whereas having two figrues will open a seperate window that
+          contains only the information that is defined within that figures
+          code. <br />
+          5.2)<br />
+          <img src="/Lab5/Q5aplot.png" alt="" />
+          <br />
+          5.3)<br />
+          <img src="/Lab5/Q5bplot.png" alt="" />
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          <br />What did you enjoy about this lab?<br />
+          I enjoyed learning how to plot multiple functions on one graph. It was
+          something I was interested in learning for making scripts for doing
+          analysis outside of class.
+          <br />What didn’t go well in this lab?<br />
+          I had a hard time getting the subplots to work at first as I had to do
+          soem reading in the docs to figure out how to use them.
+          <br />How would you improve the lab experiment for future classes?<br />
+          I would add more complex functions to plot and have the students write
+          more complex subplots.
+        </p>
+      </div>
+      <div>class="section" id="code"</div>
+      <h2>Code</h2>
+      <a href="u.m">Unit Step Function</a> <br />
+      <a href="r.m">Ramp Function</a> <br />
+      <a href="p.m">Pulse Function</a> <br />
+      <a href="both.m">Step 4 Script</a> <br />
+      <a href="lab5Q5.m">Step 5 Script</a>
+    </div>
+  </body>
+</html>
