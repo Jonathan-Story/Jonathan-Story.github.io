@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #dd5522, #0056b3);
+        color: #333;
+      }
+
+      nav {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      nav a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000;
+        top: 100%;
+        left: 0;
+      }
+
+      .dropdown-content a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .container {
+        width: 80%;
+        margin: 80px auto 20px;
+        background: #edd5d5;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        margin: 0;
+      }
+
+      /* Responsive Image CSS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Adds spacing around the image */
+        border: 2px solid #0056b3; /* Adds border to match your theme */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+        border-radius: 10px; /* Optional: rounds the corners of the image */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="/Lab1/lab1.html">Lab1</a>
+          <a href="/Lab2/lab2.html">Lab2</a>
+          <a href="/Lab3/lab3.html">Lab3</a>
+          <a href="/Lab4/lab4.html">Lab4</a>
+          <a href="/Lab5/lab5.html">Lab5</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - Lab 6: System Linearity TIMS</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          The goal of this lab was to show the properties of linearity by using
+          the TIMS unit to make a variety of signal input and outputs. We used a
+          variety of modules to accomplish the transformation of the signals.
+        </p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+          <br />A.1 Comparator <br />
+          Steps A.1 1-4 were to test the lienarity of the comparator module by
+          using an input wave and looking at it's output as the amplifier was
+          increased. Below are the results of the test in a graph form. <br />
+          <img src="comparator.png" alt="Comparator Graph" />
+          This system is not linear because as the input Voltage increased the
+          output of the comparator stayed aroudn the same value. <br />
+          <br />A.2 Rectifier <br />
+          The steps for A.2 1-2 were to once again test the linearity of a
+          module. This time we were to test the rectifier module by using an
+          input wave and seeing the change of the output as the input increased.
+          Below are the results of the test in a graph form.The rectifier is
+          shown as the blue line and the red line is the previous test
+          comparator. <br />
+          <img src="rectifier.png" alt="Rectifier Graph" />
+          The result for the rectifier module would lead me to believe that the
+          system is a linear one as when the input increased the output
+          increased the same amount. <br />
+          <br />A.3 Multiplier <br />
+          The steps for A.3 1-2 were to test the linearity of the multiplier by
+          testing the property of additivity. Below arr the results of the test
+          in a table and those table values in a graph. <br />
+          <img src="table1.png" alt="Multiplier table" />
+          <img src="multiplier.png" alt="Multiplier Graph" />
+          These results show that the system is not linear as the output starts
+          increasing out of step with the input increase. The results do show
+          the half angle formula described because as soon as the input gets to
+          3 the outputs are skewed and are then shown to be non-linear. <br />
+          <br />B.1 DC Control<br />
+          Steps B.1 1-6 were to set up the picoscope to display a DC output that
+          was controlled by an input sinusoidal wave. Additonally we were to
+          test the linearity of the system as we increased the output voltage
+          from -2V to 2V. Below is a table showing the results of the test and a
+          graph to visually represent the table <br />
+          <img src="table2.png" alt="DC Control Table" />
+          <img src="dccontrol.png" alt="DC Control Graph" />
+          This system is linear as when the DC controlled voltage was increased
+          the frequency was inversely decreased which is still a linear
+          relationship. <br />
+          <br />B.2 Frequency Control <br />
+          An obvious application of a system that has a modulating frequency
+          output would be a radio since controlling the input modifies the
+          frequency of the output wave. This could work chanigng stations at
+          varying frequencies. <br />
+
+          <br />
+          C.1 The Integrator <br />
+          Steps C.1 1-6 show how the integrator module works. The integrator
+          displays the in picoscope as an input wave that is a saw tooth wave.
+          The output of the system shows the integral of this function as a
+          square wave which is the expected result.Below is the result from
+          picoscope <br />
+          <img src="C1.png" alt="Integrator Graph" />
+          <br />C.2 Feeback System <br />
+          Step C.2 of the lab was to demonstrate how a feedback wave works when
+          looked at up close. The feeback wave takes time to get to the actual
+          output that is desired when it is triggered. This time can be measured
+          by mutliplying the peak of the pulse when it triggers by e^-1 and
+          calculating the time it takes to reach that value. The time it took
+          for my simulation was around 66 microseconds. <br />
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          <br />What did you enjoy about this lab?<br />
+          I enjoyed using more complex modules to integrate and multiply waves
+          together.
+          <br />What didn’t go well in this lab?<br />
+          It took me a while to figure out what the goal of step C.2 was and how
+          to measure that time.
+          <br />How would you improve the lab experiment for future classes?<br />
+          I would improve the instructions. It would be helpful to mention the
+          order that the picoscope and arb software shoudl be opened in as this
+          caused me some issues.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
