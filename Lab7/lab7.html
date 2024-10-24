@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #dd5522, #0056b3);
+        color: #333;
+      }
+
+      nav {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      nav a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000;
+        top: 100%;
+        left: 0;
+      }
+
+      .dropdown-content a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .container {
+        width: 80%;
+        margin: 80px auto 20px;
+        background: #edd5d5;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        margin: 0;
+      }
+      .rotated-image {
+        transform: rotate(-90deg);
+        width: 70%;
+      } 
+
+      /* Responsive Image CSS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Adds spacing around the image */
+        border: 2px solid #0056b3; /* Adds border to match your theme */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+        border-radius: 10px; /* Optional: rounds the corners of the image */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="/Lab1/lab1.html">Lab1</a>
+          <a href="/Lab2/lab2.html">Lab2</a>
+          <a href="/Lab3/lab3.html">Lab3</a>
+          <a href="/Lab4/lab4.html">Lab4</a>
+          <a href="/Lab5/lab5.html">Lab5</a>
+          <a href="/Lab6/lab6.html">Lab6</a>
+          <a href="/Lab7/lab7.html">Lab7</a>
+          <a href="/Lab8/lab8.html">Lab8</a>
+          <a href="/Lab9/lab9.html">Lab9</a>
+          <a href="/Lab10/lab10.html">Lab10</a>
+          <a href="/Lab11/lab11.html">Lab11</a>
+          <a href="/Lab12/lab12.html">Lab12</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - Lab 7: Laplace and MATLAB</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          The goal of this lab was to use MATLAB to solve a circuit. This is
+          done utilizng laplace tranforms by turning the circuit into an s
+          domain circuit. Additionally, the results of the circuit analysis are
+          cleaned up and plotted in a variety of ways.
+        </p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+          <h3>Section 1.1 </h3> 
+          The circuit was given in its time domain form and was additionally,
+          shown at half resistor values to give the average values for
+          transforming to s domain. To transform to the s domain, Each resistor
+          stays the same where capacitors are turned into 1/(sC). Using this
+          information, Three mesh equations can be written and matrix equations
+          can be made out of those. Below is a picture of my handwritten work
+          for this part.
+          <img src="matrix.jpg" alt="s-domainmatrix" class="rotated-image"/>
+
+          
+
+          <h3>Section 2</h3>
+
+          Vout is derived from using the currents found in the mesh equations multiplied by resistor values from the output location to the ground node. 
+
+
+          <h3>Section 5</h3>
+          The value of Np(1) comes up as zero because we divide the value of Np by the variable k which is the max value between Np and Dp. When dividing by this max value Np becomes basically zero for the first value of the vector.
+
+          <h3>Section 6</h3>
+          The Bode Diagram shows how the circuit will react udner different frequencies. From the graph I got from the script, it seems that an increase in frequency will cause an almost linear increase in magnitude until a certain point. Below is the diagram output from my script. 
+          <img src="bode.png" alt="bode"/>
+
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          <br />What did you enjoy about this lab?<br />
+          I enjoyed getting practice with laplace transforms on a real circuit that is used. I liked using these transforms to solve an entire problem with a simple and quick script.
+          <br />What didn’t go well in this lab?<br />
+          I had a hard time understanding if my values were actually correct. I had to go back and change a few things around to get an end result that I think is correct.
+          <br />How would you improve the lab experiment for future classes?<br />
+          I would make the circuit include a inductor so we get practice solving the transforms with inductors in them.
+        </p>
+      </div>
+      <div>class="section" id="code"</div>
+      <h2>Code</h2>
+      <a href="Laplace_MATLAB.m">Unit Step Function</a> <br />
+      
+    </div>
+  </body>
+</html>
