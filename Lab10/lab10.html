@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #dd5522, #0056b3);
+        color: #333;
+      }
+
+      nav {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      nav a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000;
+        top: 100%;
+        left: 0;
+      }
+
+      .dropdown-content a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .container {
+        width: 80%;
+        margin: 80px auto 20px;
+        background: #edd5d5;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        margin: 0;
+      }
+      .rotated-image {
+        transform: rotate(-90deg);
+        width: 70%;
+      }
+
+      /* Responsive Image CSS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Adds spacing around the image */
+        border: 2px solid #0056b3; /* Adds border to match your theme */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+        border-radius: 10px; /* Optional: rounds the corners of the image */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="/Lab1/lab1.html">Lab1</a>
+          <a href="/Lab2/lab2.html">Lab2</a>
+          <a href="/Lab3/lab3.html">Lab3</a>
+          <a href="/Lab4/lab4.html">Lab4</a>
+          <a href="/Lab5/lab5.html">Lab5</a>
+          <a href="/Lab6/lab6.html">Lab6</a>
+          <a href="/Lab7/lab7.html">Lab7</a>
+          <a href="/Lab8/lab8.html">Lab8</a>
+          <a href="/Lab9/lab9.html">Lab9</a>
+          <a href="/Lab10/lab10.html">Lab10</a>
+          <a href="/Lab11/lab11.html">Lab11</a>
+          <a href="/Lab12/lab12.html">Lab12</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - Lab 10: Fourier Series Matlab</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>In this lab, the objective is to utilize code provided to</p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+          <br />A.1) What happens to the overall signal when harmonics are
+          added?<br />
+          When I run the sections that have more harmonics added the sound
+          played is not only way louder but also has a higher pitch.
+          Additionally the sound has a sort of distortion sound to it when there
+          are more harmonics.
+
+          <br /><br />A.2) Observe each plot, listen to the associated sound and
+          explain the relationship you notice between plot and corresponding
+          sound. <br />
+          When lookign at the different plots I notice dthat as the number of
+          harmonics increases the plot that matlab produces becomes more and
+          more condensed and starts to resemble a square wave.
+
+          <br /><br />B.1) Write a brief description of how CODE 2 implements
+          the Fourier series described by Equation (1). <br />
+          The code implements the fourier series by using a for loop to add up
+          all the sin waves using certain coefficients. The number of waves it
+          adds together depends on the user input. The higher the input the more
+          square the output is going to look.
+
+          <br /><br />B.2) Using the command hold on, plot the graph produced by
+          CODE 1 and CODE 2 on the same picture. Consider the number of terms
+          N_TERMS = 7. Insert a legend on your plot describing the two signals:
+          name the ideal square wave f(x) and the approximation f’(x).
+
+          <img src="/Lab10/B2.png" alt="" />
+
+          <br /><br />B.3) Run the code that results from B.2 for N_TERMS =
+          10,20 and 30 without closing the Figure each time you run. This way
+          you will have multiple plots on Figure 1. Include the plot on your
+          report and answer the following question: considering the ideal square
+          wave f(x) as a reference, where in the signal wave do the
+          approximations of f(x) have the greatest error/oscillation?
+
+          <img src="/Lab10/B3.png" alt="" />
+
+          When looking at he resulting waves it is plain to see that the
+          greatest error occurs when the wave needs to make the jump to one.
+          After this point the line is straight and the sine waves can get
+          pretty close to a constant value.
+
+          <br /><br />B.4) The Gibbs phenomenon is an overshoot (or "ringing")
+          of the Fourier series. Defining the overshoot as the difference in
+          amplitude between the highest point of the approximation and the
+          reference function, record the overshoot values in Table 1 associated
+          with each of the following number of terms. What is the relationship
+          between the overshoot and the number of terms in the series? <br />
+
+          <img src="/Lab10/table1.png" alt="" />
+
+          The overshoot seems to decrease as the number of terms increases.
+          These values were recorded measuring the highest point of the
+          approximation and the reference function. The overshoot is the
+          difference between these two values.
+
+          <br /><br />B.5) Run CODE 2 multiple times (for N_TERMS = 7,20,30,50
+          and 100.) and, using the command tic toc, record in Table 2 the time
+          MATLAB takes to perform the approximation of f(x). Notice that you can
+          uncomment % tic and % toc to perform the required task. Table 2 –
+          Computational time for different number of terms of the FS.
+
+          <img src="/Lab10/table2.png" alt="" />
+
+          The above table shows how the computational time increases as the
+          number of terms increases.
+
+          <br /><br />B.6) From the previous problems it could be noticed that,
+          the higher number of terms of the series is, more precise the
+          approximation will be; however, the computational time cost increases.
+          In practice, we must find a balance between precision and
+          computational cost when using Fourier series. What determines this
+          balance? <br />
+          The balance is determined by the application of the fourier series. If
+          a very precise answer is needed then the computational time is worth
+          it. However, if the application is not as precise then the
+          computational time is not worth it. These two factors must be traded
+          off to get the best result and is completely based off what type of
+          system is being used. If the system is a very complex periodic system
+          then the computational time is worth it. However, if the system is a
+          simple square wave then the computational time is not worth it.
+
+          <br /><br />C.1) CODE 2 implements the approximation of a square wave
+          using Fourier series. Modify this code so that it will produce the
+          approximation of a triangular wave (more specifically, a sawtooth
+          wave) similar to the one shown in Figure 1. In your report, include,
+          on the same figure, plots of the approximated sawtooth function
+          considering N_TERMS = 10,20 and 30.
+
+          <img src="/Lab10/C1.png" alt="" />
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          <br />What did you enjoy about this lab?<br />
+          I really enjoyed this lab and making a fourier series in matlab. It
+          was cool to see how the square wave can be approximated so easily. The
+          sound portion was interesting as well and goes ot show the
+          complexities of sound engineering.
+          <br />What didn’t go well in this lab?<br />
+          I did not realize that the first part of this lab was going to make
+          noise and it was very loud with earphones on :o
+          <br />How would you improve the lab experiment for future classes?<br />
+          I would add mmaybe a live script to be able to actively interact with
+          the fourier series.
+        </p>
+      </div>
+      <div>class="section" id="code"</div>
+      <h2>Code</h2>
+      <a href="/Lab10/square.m">Sqaure Wave Code</a> <br />
+      <a href="/Lab10/sawtooth.m">Sawtooth Wave Code</a>
+    </div>
+  </body>
+</html>
