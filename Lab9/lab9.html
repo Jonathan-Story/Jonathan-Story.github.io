@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Report - [Lab Name]</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #dd5522, #0056b3);
+        color: #333;
+      }
+
+      nav {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      nav a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 160px;
+        z-index: 1000;
+        top: 100%;
+        left: 0;
+      }
+
+      .dropdown-content a {
+        color: #0056b3;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        transition: background 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: #dd5522;
+        color: #fff;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .container {
+        width: 80%;
+        margin: 80px auto 20px;
+        background: #edd5d5;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        border-bottom: 2px solid #0056b3;
+        padding-bottom: 5px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section p {
+        margin: 0;
+      }
+      .rotated-image {
+        transform: rotate(-90deg);
+        width: 70%;
+      }
+
+      /* Responsive Image CSS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Adds spacing around the image */
+        border: 2px solid #0056b3; /* Adds border to match your theme */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow */
+        border-radius: 10px; /* Optional: rounds the corners of the image */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Labs</a>
+        <div class="dropdown-content">
+          <a href="/Lab1/lab1.html">Lab1</a>
+          <a href="/Lab2/lab2.html">Lab2</a>
+          <a href="/Lab3/lab3.html">Lab3</a>
+          <a href="/Lab4/lab4.html">Lab4</a>
+          <a href="/Lab5/lab5.html">Lab5</a>
+          <a href="/Lab6/lab6.html">Lab6</a>
+          <a href="/Lab7/lab7.html">Lab7</a>
+          <a href="/Lab8/lab8.html">Lab8</a>
+          <a href="/Lab9/lab9.html">Lab9</a>
+          <a href="/Lab10/lab10.html">Lab10</a>
+          <a href="/Lab11/lab11.html">Lab11</a>
+          <a href="/Lab12/lab12.html">Lab12</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Lab Report - Lab 9: Convolution TIMS Wk 2</h1>
+
+      <div class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>In this lab, the objective is to follow up ont he first week of convolutions and anylzing the operation further.</p>
+      </div>
+
+      <div class="section" id="procedures">
+        <h2>Procedures</h2>
+        <p>
+
+            1)  Explain in detail the output of the system in Figures 1 and 2.<br> 
+            The output of the system in the figures is the addition of all three input signals on top of each other.
+            
+            2) What electrical circuit component creates the presence of ‘delayed energy’?<br>
+            The component that creates this presence of delayed energy is etiher a capacitor or an inductor as they both hold charge through differnt means.
+
+            3) Explain the superposition sum in your lab notebook in your own words <br>
+            When adding two signals together that result in a new signal 'x'. If a filter is applied to that signal, the output of that would be the same as applying the same filter to both input signals.
+
+            4)  Based on your findings from Week 1, explain what you would expect the system output to be if the input was four pulses back to back instead of one or two?<br>
+            Based on the prior week, I would assume that the output of the sum would be split into more parts instead of just two, specifcally four.
+
+            5)  How could you adjust the current TIMS setup to simulate this?
+            In order to get the TIMS unit to emulate this behavior, you would need to adjust the frequency to half of what it was before.
+
+            6) 
+
+            <img src="table1.png" alt="">
+
+            Error y[0] = .4 V 
+            Error y[1] = .7 V
+            Error y[2] = .9 V
+
+            7) Write equations for y[1], y[2], and y[6]
+
+            y[1] =h[0] · x[1] + h[1] · x[6] + h[2] · x[5]
+            y[2] =h[0] · x[2] + h[1] · x[1] + h[2] · x[6]
+            y[6] =h[0] · x[6] + h[1] · x[5] + h[2] · x[4]
+            
+
+            Signal Handout
+
+            
+            <img src="handout.jpg" alt="" width="50%" height="30%">
+
+        </p>
+      </div>
+
+      <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          <br />What did you enjoy about this lab?<br />
+          I found the idea of convolution to be interesting and I enjoyed the hands on aspect of the lab<br />
+          
+          <br />What didn’t go well in this lab?<br />
+          I found the lab to be a bit confusing at times, especially the first week, but I was able to get through it<br />
+          
+          <br />How would you improve the lab experiment for future classes?<br />
+            I would suggest maybe having a bit more guidance on the first week of the lab as it was a bit confusing<br />   
+          
+        </p>
+      </div>
+  </body>
+</html>
